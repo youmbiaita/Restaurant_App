@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const menusCtrl = require('../controllers/menusController.js');
+const menusCtrl = require('../controllers/menus.js');
 
 const router = Router();
 
