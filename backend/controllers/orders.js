@@ -1,4 +1,4 @@
-const Order = require('../models/Order');
+const Order = require('../models/order.js');
 
 //export all functions
 module.exports = {
