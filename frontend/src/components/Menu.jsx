@@ -7,23 +7,13 @@ function Menus() {
   const BASE_URL = 'http://localhost:3000/';
 
   useEffect(() => {
-    const getMenu = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/menus`);
+    // Fetch menus from your API
+    console.log(fetch('/menus'))
+    fetch('/menus')
+      .then((res) => res.json())
+     .then((data) => setMenu(data))
+     .catch((error) => console.error(error));
 
-        if (response.status !== 200) {
-          return;
-        }
-
-        const data = await response.json();
-
-        setMenu(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    getMenu();
   }, []);
 
   return (
